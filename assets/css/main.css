@@ -1,0 +1,379 @@
+/* General Rules Start */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+:root {
+  /* Variables */
+  --primary-color: #2376eb;
+  --light-silver: #cfcfcf;
+  --dark-silver: #8c8c8c;
+  --darker-silver: #4d4d4d;
+
+  /* Transitions */
+  --transition-duration: 0.25s;
+  --transition-style: linear;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body * {
+  font-family: "Cairo", sans-serif;
+}
+
+/* To make footer stick to bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.project-thumbnail {
+  width: 230px;
+  height: 130px;
+}
+
+.sp {
+  padding: 2rem 0;
+}
+
+.cta {
+  background-color: var(--primary-color);
+  color: #fff;
+  opacity: 0.87;
+}
+
+.cta:hover,
+.cta:focus {
+  opacity: 1;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.sec-title {
+  font-family: "Fira Code", sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+/* Transition classes */
+.cta,
+.navbar-links a::before,
+.form-group span,
+.find-me-in a {
+  transition: all var(--transition-duration) var(--transition-style);
+  -moz-transition: all var(--transition-duration) var(--transition-style);
+  -o-transition: all var(--transition-duration) var(--transition-style);
+  -webkit-transition: all var(--transition-duration) var(--transition-style);
+}
+/* General Rules END */
+
+/* Hero Start */
+.hero {
+  background: linear-gradient(#08254e, #4070b4);
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  padding-top: 1rem;
+}
+
+.navbar.fixed {
+  position: fixed;
+  left: 0;
+  background: rgba(96, 125, 139, 0.85);
+  width: 100%;
+}
+
+.navbar a {
+  /*logo line hight*/
+  line-height: 1.2;
+}
+
+.navbar.fixed a {
+  margin-left: 2rem;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  margin-right: 10rem;
+}
+
+.navbar-links a {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar-links a:not(.cta):before {
+  content: "";
+  height: 0.17rem;
+  width: 0;
+  position: absolute;
+  background-color: var(--primary-color);
+  bottom: 0.1rem;
+}
+
+.navbar-links a:hover::before {
+  width: 100%;
+}
+
+.navbar-links .cta {
+  border-radius: 0.3rem;
+  font-weight: 700;
+  background-color: rgba(35, 118, 235, 0.7);
+  padding: 0.3rem 1.5rem;
+}
+
+.content {
+  display: flex;
+  padding: 5rem 0 2rem;
+}
+
+.navbar.fixed + .content {
+  padding: 9rem 0 2rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  color: #fff;
+}
+
+.intro p {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.intro h1 {
+  font-size: 2em;
+  line-height: 1.3;
+  margin: 0 0 5rem;
+}
+
+.find-me-in p {
+  font-size: 0.95em;
+  font-family: "Fira Code", sans-serif;
+}
+
+.find-me-in a {
+  display: inline-flex;
+  margin: 0.5rem;
+}
+
+.find-me-in a:hover {
+  transform: translateY(-0.2rem);
+}
+
+.find-me-in a:first-of-type {
+  margin-left: 0;
+}
+
+.projects-preview {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.projects-preview a {
+  display: flex;
+}
+
+.projects-preview .project-thumbnail {
+  border-radius: 0.6rem;
+}
+
+.projects-preview a:nth-child(2) {
+  margin-right: 7rem;
+}
+
+.hero .container > .cta {
+  text-transform: capitalize;
+  padding: 0.3rem 3rem;
+  display: block;
+  width: fit-content;
+  margin: 1rem auto 2.5rem;
+}
+/* Hero End */
+
+/* Latest Projects Start */
+.projects-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project {
+  display: inline-flex;
+}
+
+.latest-projects .previous img,
+.latest-projects .next img {
+  width: 1.5rem;
+}
+
+.latest-projects .previous img {
+  margin-right: 2rem;
+}
+
+.latest-projects .next img {
+  margin-left: 2rem;
+}
+/* Latest Projects End */
+
+/* What I do Start */
+.plans {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--light-silver);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.plan.popular {
+  margin-top: -0.7rem;
+}
+
+.plan.popular > span {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.plan > span {
+  font-size: 2.1em;
+  font-weight: 600;
+}
+
+.plan > span > small {
+  font-size: 0.5em;
+  font-weight: 400;
+}
+
+.plan ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.plan .cta {
+  border: none;
+  text-transform: uppercase;
+  padding: 0.2rem 2.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/* What I do End */
+
+/* Get In Touch Start */
+.get-in-touch form {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 85%;
+  padding: 0.3rem 1rem;
+  font-size: 1.1em;
+  background-color: var(--light-silver);
+  border: none;
+  border-bottom: 0.2rem solid var(--dark-silver);
+  margin-bottom: 0.5rem;
+}
+
+.form-group span {
+  position: absolute;
+  left: 5.5rem;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  color: var(--dark-silver);
+}
+
+.form-group input:focus + span,
+.form-group input:valid + span,
+.form-group textarea:valid + span,
+.form-group textarea:focus + span {
+  top: -2.15rem;
+  font-size: 0.9em;
+  color: var(--darker-silver);
+}
+
+.form-group input:valid,
+.form-group textarea:valid {
+  border-bottom-color: #00b409;
+}
+
+.form-group .cta {
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 0.3rem 3rem;
+  border: none;
+}
+
+textarea {
+  height: 10rem;
+  resize: none;
+}
+/* Get In Touch End */

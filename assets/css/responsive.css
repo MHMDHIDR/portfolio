@@ -1,0 +1,95 @@
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-links {
+    margin-right: 0;
+  }
+  .latest-projects .previous img {
+    margin-right: 0.5rem;
+  }
+
+  .latest-projects .next img {
+    margin-left: 0.5rem;
+  }
+
+  .projects-carousel .project-thumbnail,
+  .projects-preview .project-thumbnail {
+    width: 175px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar.fixed a {
+    margin-left: 0;
+  }
+
+  .navbar-links {
+    width: 100%;
+    padding-left: 0;
+    justify-content: space-between;
+  }
+
+  .navbar.fixed .navbar-links {
+    justify-content: space-around;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .projects-preview {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .projects-preview a:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .projects .project:not(:first-of-type) {
+    display: none;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  .form-group span {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .plan {
+    width: 250px;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar.fixed + .content {
+    padding: 15rem 0 2rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .form-group .cta {
+    margin-bottom: 1rem;
+  }
+}
