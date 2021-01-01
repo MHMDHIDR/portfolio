@@ -378,4 +378,26 @@ textarea {
   height: 10rem;
   resize: none;
 }
+
+.form-massages {
+  display: flex;
+  flex: 1;
+  margin: 0.7em;
+  padding: 0.7em;
+}
+.form-massages.succ {
+  color: #1b6d2e;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+.form-massages.fail {
+  color: #9e212e;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.form-massages.info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
 /* Get In Touch End */
