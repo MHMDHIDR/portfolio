@@ -84,7 +84,7 @@
   }
 
   .navbar-links {
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
   }
