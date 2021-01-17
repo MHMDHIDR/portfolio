@@ -35,7 +35,6 @@
   .navbar-links {
     width: 100%;
     padding-left: 0;
-    justify-content: space-between;
   }
 
   .navbar.fixed .navbar-links {
@@ -50,12 +49,19 @@
 
   .projects-preview {
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 1rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .projects-preview a {
+    position: static;
   }
 
   .projects-preview a:nth-child(2) {
-    margin-right: 0;
+    transform: translateY(0);
   }
 
   .projects .project:not(:first-of-type) {

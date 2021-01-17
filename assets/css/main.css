@@ -16,7 +16,7 @@
 
   /* Transitions */
   --transition-duration: 0.25s;
-  --transition-style: linear;
+  --transition-style: ease;
 }
 
 html,
@@ -88,6 +88,7 @@ body {
 .cta,
 .navbar-links a::before,
 .form-group span,
+.projects-preview a,
 .find-me-in a {
   transition: all var(--transition-duration) var(--transition-style);
   -moz-transition: all var(--transition-duration) var(--transition-style);
@@ -208,23 +209,34 @@ body {
 }
 
 .projects-preview {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.5rem;
+  position: relative;
+  /* display: inline-flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: flex-end; */
+  /* gap: 0.5rem; */
   flex: 1;
 }
 
 .projects-preview a {
-  display: flex;
+  position: absolute;
+  transition-duration: 0.7s;
+}
+
+.projects-preview a:first-child {
+  right: -100%;
+}
+.projects-preview a:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 200%;
+}
+.projects-preview a:last-child {
+  bottom: 0;
+  right: -100%;
 }
 
 .projects-preview .project-thumbnail {
   border-radius: 0.6rem;
-}
-
-.projects-preview a:nth-child(2) {
-  margin-right: 7rem;
 }
 
 .hero .container > .cta {
