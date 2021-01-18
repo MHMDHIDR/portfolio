@@ -80,7 +80,6 @@ body {
   font-size: 1.3em;
   text-align: center;
   font-weight: 600;
-  text-transform: uppercase;
   margin-bottom: 3rem;
 }
 
@@ -240,7 +239,8 @@ body {
 }
 
 .hero .container > .cta {
-  text-transform: capitalize;
+  font-size: 1.3em;
+  font-weight: 700;
   padding: 0.3rem 3rem;
   display: block;
   width: fit-content;
@@ -263,6 +263,9 @@ body {
 
 .project {
   display: inline-flex;
+  border: 1px solid var(--light-silver);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .latest-projects .previous img,
@@ -277,12 +280,13 @@ body {
 .latest-projects .next img {
   margin-left: 2rem;
 }
+
 /* Latest Projects End */
 
 /* What I do Start */
 .plans {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 3rem;
 }
@@ -292,16 +296,17 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--light-silver);
+  min-width: 12.5rem;
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
   text-align: center;
 }
 
-.plan.popular {
+.plan.recommended {
   margin-top: -0.7rem;
 }
 
-.plan.popular > span {
+.plan.recommended > span {
   color: var(--primary-color);
   font-weight: 700;
 }
@@ -323,7 +328,6 @@ body {
 }
 .plan .cta {
   border: none;
-  text-transform: uppercase;
   padding: 0.2rem 2.5rem;
   border-radius: 1rem;
   cursor: pointer;
@@ -381,7 +385,6 @@ body {
 
 .form-group .cta {
   cursor: pointer;
-  text-transform: capitalize;
   padding: 0.3rem 3rem;
   border: none;
 }
