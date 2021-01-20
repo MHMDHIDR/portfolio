@@ -9,6 +9,7 @@
 
 :root {
   /* Variables */
+  --bg-color: #eee;
   --primary-color: #2376eb;
   --light-silver: #cfcfcf;
   --dark-silver: #8c8c8c;
@@ -36,7 +37,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
-  background-color: #eee;
+  background-color: var(--bg-color);
 }
 
 ::-webkit-scrollbar {
@@ -86,9 +87,9 @@ body {
 /* Transition classes */
 .cta,
 .navbar-links a::before,
-.form-group span,
 .projects-preview a,
-.find-me-in a {
+.find-me-in a,
+.form-group {
   transition: all var(--transition-duration) var(--transition-style);
   -moz-transition: all var(--transition-duration) var(--transition-style);
   -o-transition: all var(--transition-duration) var(--transition-style);
@@ -344,43 +345,41 @@ body {
   position: relative;
   display: block;
   margin-bottom: 2rem;
-}
-
-.form-group:last-of-type {
-  margin-bottom: 1rem;
+  width: 90%;
+  margin: 0 auto 2rem;
+  border: 1px solid var(--light-silver);
+  border-radius: 0.5rem;
+  padding: 1rem 0 0;
 }
 
 .form-group input,
 .form-group textarea {
-  width: 85%;
-  padding: 0.3rem 1rem;
-  font-size: 1.1em;
-  background-color: var(--light-silver);
+  width: 100%;
+  padding: 0.3rem 1rem 1rem;
+  font-size: 1.2em;
+  color: var(--darker-silver);
+  background-color: transparent;
   border: none;
-  border-bottom: 0.2rem solid var(--dark-silver);
-  margin-bottom: 0.5rem;
+}
+
+.form-group:focus-within {
+  border-color: var(--dark-silver);
 }
 
 .form-group span {
   position: absolute;
-  left: 5.5rem;
-  font-size: 1.1em;
+  left: 1rem;
+  top: -1.2rem;
+  font-size: 1.2em;
+  background-color: #eee;
+  padding: 0 0.5rem;
   text-transform: capitalize;
   color: var(--dark-silver);
 }
 
-.form-group input:focus + span,
-.form-group input:valid + span,
-.form-group textarea:valid + span,
-.form-group textarea:focus + span {
-  top: -2.15rem;
-  font-size: 0.9em;
-  color: var(--darker-silver);
-}
-
-.form-group input:valid,
-.form-group textarea:valid {
-  border-bottom-color: #00b409;
+div.form-group:last-child,
+.form-group.cta-btns {
+  border: none;
 }
 
 .form-group .cta {
