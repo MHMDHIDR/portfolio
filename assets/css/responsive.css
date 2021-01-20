@@ -64,7 +64,7 @@
     transform: translateY(0);
   }
 
-  .projects .project:not(:first-of-type) {
+  .projects .project:not(:first-of-type, :nth-child(2)) {
     display: none;
   }
 
@@ -75,6 +75,12 @@
 
   .form-group span {
     left: 1rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .projects .project:not(:first-of-type) {
+    display: none;
   }
 }
 

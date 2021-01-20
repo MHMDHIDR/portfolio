@@ -1,8 +1,11 @@
 "use strict";
 
-// Copyrights current year
-document.querySelector('.year').innerHTML = new Date().getFullYear()
-
+// animation onload
+window.onload = () => {
+  const projPreviews = document.querySelectorAll('.projects-preview a')
+  projPreviews[0].style.right = projPreviews[2].style.right = "0"
+  projPreviews[1].style.left = "0"
+}
 // submit Contact Form Function
 const form = {
   name: document.getElementById('name'),
@@ -35,12 +38,6 @@ form.submitBtn.addEventListener("click", (e) => {
   request.send(requestData);
 });
 
-// animation onload
-window.onload = () => {
-  const heroProject1 = document.querySelector('.projects-preview a:first-child')
-  const heroProject2 = document.querySelector('.projects-preview a:nth-child(2)')
-  const heroProject3 = document.querySelector('.projects-preview a:last-child')
-  // position
-  heroProject1.style.right = heroProject3.style.right = "0"
-  heroProject2.style.left = "0"
-}
+
+// Copyrights current year
+document.querySelector('.year').innerHTML = new Date().getFullYear()
