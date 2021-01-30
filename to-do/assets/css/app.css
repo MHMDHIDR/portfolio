@@ -59,7 +59,6 @@ body {
   background-color: #fcfcfc;
   max-width: 400px;
   min-width: 320px;
-  height: 100vh;
   max-height: 100vh;
   margin: 5rem auto 0;
   overflow: hidden;
@@ -261,6 +260,7 @@ body {
       -ms-flex: 1;
           flex: 1;
   overflow-x: hidden;
+  min-height: 10rem;
 }
 
 .app-container > main .tasks {
