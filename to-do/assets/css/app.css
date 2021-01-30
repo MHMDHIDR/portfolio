@@ -61,7 +61,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   max-height: 100vh;
-  margin: auto;
+  margin: 5rem auto 0;
   overflow: hidden;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
