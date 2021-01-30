@@ -59,7 +59,7 @@ body {
   background-color: #fcfcfc;
   max-width: 400px;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   max-height: 100vh;
   margin: 5rem auto 0;
   overflow: hidden;
