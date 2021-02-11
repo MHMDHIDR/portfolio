@@ -6,6 +6,26 @@ window.onload = () => {
   projPreviews[0].style.right = projPreviews[2].style.right = "0"
   projPreviews[1].style.left = "0"
 }
+
+// scroll to section
+const navLinks = document.querySelectorAll('.hero a');
+navLinks.forEach(link => {
+  if(link.hasAttribute('data-link')) { // check if link has data-link attr
+    link.addEventListener('click', e => {
+      e.preventDefault(); // prevent reloading page
+      // getting value of data-link
+      const linkTarget = e.target.dataset.link;
+      window.scrollTo({ // scroll the window
+        // getting top position of the Targeted element Class (50 means sp (section padding)
+        // put the scroll to the top of the targeted element (-) minus 50px of padding
+        bottom: (document.getElementById(linkTarget).offsetTop) - 50,
+        behavior: "smooth"
+      }) 
+    })
+  }
+});
+
+
 // submit Contact Form Function
 const form = {
   name: document.getElementById('name'),
@@ -37,7 +57,6 @@ form.submitBtn.addEventListener("click", (e) => {
   request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   request.send(requestData);
 });
-
 
 // Copyrights current year
 document.querySelector('.year').innerHTML = new Date().getFullYear()
