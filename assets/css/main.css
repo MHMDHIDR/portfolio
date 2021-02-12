@@ -89,7 +89,9 @@ body {
 .navbar-links a::before,
 .projects-preview a,
 .find-me-in a,
-.form-group {
+.form-group,
+.scroll-top,
+.scroll-top::after {
   transition: all var(--transition-duration) var(--transition-style);
   -moz-transition: all var(--transition-duration) var(--transition-style);
   -o-transition: all var(--transition-duration) var(--transition-style);
@@ -274,6 +276,7 @@ body {
 }
 
 .latest-projects .previous img {
+  transform: rotate(180deg);
   margin-right: 2rem;
 }
 
@@ -414,3 +417,38 @@ textarea {
   border-color: #bce8f1;
 }
 /* Get In Touch End */
+
+/* ScrollTop Strat */
+.scroll-top {
+  --size: 2rem;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+  border-radius: calc(var(--size) * 0.15);
+  background-color: var(--primary-color);
+  position: fixed;
+  right: 2rem;
+  pointer-events: none;
+  opacity: 0;
+  bottom: 20rem;
+}
+.scroll-top::after {
+  content: "⬆";
+  display: block;
+  height: var(--size);
+  text-align: center;
+  font-size: calc(var(--size) * 0.5);
+  color: var(--light-silver);
+}
+.scroll-top:hover {
+  background-color: var(--light-silver);
+}
+.scroll-top:hover::after {
+  color: var(--primary-color);
+}
+.scroll-top.active {
+  pointer-events: all;
+  bottom: 2rem;
+  opacity: 1;
+}
+/* ScrollTop End */

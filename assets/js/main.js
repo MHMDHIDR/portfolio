@@ -18,13 +18,27 @@ navLinks.forEach(link => {
       window.scrollTo({ // scroll the window
         // getting top position of the Targeted element Class (50 means sp (section padding)
         // put the scroll to the top of the targeted element (-) minus 50px of padding
-        bottom: (document.getElementById(linkTarget).offsetTop) - 50,
+        top: (document.getElementById(linkTarget).offsetTop) - 50,
         behavior: "smooth"
       }) 
     })
   }
 });
 
+// windows scrollTop button
+window.addEventListener("scroll", () => {
+  // scroll to the top of page function
+  const scrollTop = document.querySelector(".scroll-top");
+  // show and hide btn
+  scrollTop.classList.toggle("active", window.scrollY > 500);
+  // when click scroll top
+  scrollTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
 
 // submit Contact Form Function
 const form = {
