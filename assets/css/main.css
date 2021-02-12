@@ -246,6 +246,7 @@ body {
   padding: 0.3rem 3rem;
   display: block;
   width: fit-content;
+  width: -moz-fit-content;
   margin: 1rem auto 2.5rem;
 }
 /* Hero End */
