@@ -421,7 +421,7 @@ textarea {
 
 /* ScrollTop Strat */
 .scroll-top {
-  --size: 2rem;
+  --size: 5vmax;
   cursor: pointer;
   width: var(--size);
   height: var(--size);
@@ -435,6 +435,7 @@ textarea {
 }
 .scroll-top::after {
   content: "⬆";
+  content: "☝🏽";
   display: block;
   height: var(--size);
   text-align: center;
