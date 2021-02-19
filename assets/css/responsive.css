@@ -97,7 +97,7 @@
   }
 }
 
-@media (max-width: 250px) {
+@media (max-width: 280px) {
   .navbar-links {
     flex-wrap: wrap;
     align-items: center;
