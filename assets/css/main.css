@@ -87,6 +87,7 @@ body {
 /* Transition classes */
 .cta,
 .navbar-links a::before,
+.navbar.fixed .logo,
 .projects-preview a,
 .find-me-in a,
 .form-group,
@@ -121,6 +122,14 @@ body {
   padding-top: 0;
 }
 
+.navbar.fixed .logo {
+  width: 6.5rem;
+}
+
+.navbar.fixed.shrink .logo {
+  width: 5.5rem;
+}
+
 .navbar a {
   /*logo line hight*/
   line-height: 1.2;
@@ -135,7 +144,12 @@ body {
   display: flex;
   flex: 1;
   justify-content: space-evenly;
-  margin-right: 10rem;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.navbar.fixed.shrink .navbar-links {
+  padding: 0.5rem 0;
 }
 
 .navbar-links a {
@@ -161,7 +175,7 @@ body {
   border-radius: 0.3rem;
   font-weight: 700;
   background-color: rgba(35, 118, 235, 0.7);
-  padding: 0.3rem 1.5rem;
+  padding: 0.15rem 0.5rem;
 }
 
 .content {

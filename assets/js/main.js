@@ -29,8 +29,11 @@ navLinks.forEach(link => {
 window.addEventListener("scroll", () => {
   // scroll to the top of page function
   const scrollTop = document.querySelector(".scroll-top");
+  const navFixed = document.querySelector(".navbar.fixed");
   // show and hide btn
   scrollTop.classList.toggle("active", window.scrollY > 500);
+  // toggle shrink on fixed nav
+  navFixed.classList.toggle("shrink", window.scrollY > 100);
   // when click scroll top
   scrollTop.addEventListener("click", () => {
     window.scrollTo({
